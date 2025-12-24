@@ -40,6 +40,18 @@ body {
   font-size: 0.95em;
 }
 
+
+
+/* Smooth scrolling for anchors */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
 /* HERO SECTION */
 .hero {
   height: 100vh;
