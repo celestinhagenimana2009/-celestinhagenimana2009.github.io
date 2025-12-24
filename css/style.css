@@ -40,18 +40,6 @@ body {
   font-size: 0.95em;
 }
 
-
-
-/* Smooth scrolling for anchors */
-html {
-  scroll-behavior: smooth;
-}
-
-
-
-
-
-
 /* HERO SECTION */
 .hero {
   height: 100vh;
@@ -100,4 +88,42 @@ html {
   text-decoration: none;
   border-radius: 30px;
   font-size: 0.9em;
+}
+
+/* SECTION STYLING */
+.section {
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #2dd4bf;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
 }
