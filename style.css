@@ -1,61 +1,71 @@
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   margin: 0;
-  background: #ffffff;
   color: #222;
+  background: #ffffff;
 }
 
-.container {
+.header {
   max-width: 1100px;
-  margin: 30px auto 80px;
-  padding: 0 20px;
-}
-
-.topbar {
-  max-width: 1100px;
-  margin: 30px auto 10px;
+  margin: 40px auto 20px;
   padding: 0 20px;
   display: flex;
-  gap: 30px;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
-.brand .name {
-  font-size: 2em;
-  font-weight: 700;
+.header-left h1 {
+  margin: 0;
+  font-size: 2.4em;
 }
 
-.brand .tagline {
-  margin-top: 6px;
+.subtitle {
+  margin: 6px 0 14px;
   color: #555;
+  font-size: 1.05em;
 }
 
-.nav {
-  margin-top: 14px;
+.menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  gap: 18px;
 }
 
-.nav a {
+.menu a {
   text-decoration: none;
   color: #0066cc;
   font-weight: 600;
 }
 
-.topphoto img {
-  width: 160px;
-  height: 160px;
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.header-right img {
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.section {
-  margin-top: 35px;
+.content {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
 }
 
-.section h1 {
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
   font-size: 1.4em;
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
   margin-bottom: 10px;
 }
