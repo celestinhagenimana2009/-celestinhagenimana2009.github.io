@@ -13,12 +13,12 @@
   <div class="brand">I am <span>Celestin Hagenimana</span></div>
 
   <nav class="nav-menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a href="javascript:void(0);" onclick="showSection('home')">Home</a>
+    <a href="javascript:void(0);" onclick="showSection('about')">About</a>
+    <a href="javascript:void(0);" onclick="showSection('education')">Education</a>
+    <a href="javascript:void(0);" onclick="showSection('experience')">Experience</a>
+    <a href="javascript:void(0);" onclick="showSection('skills')">Skills</a>
+    <a href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
   </nav>
 </header>
 
@@ -27,26 +27,23 @@
   <div class="hero-overlay">
     <h1>I am<br><span>Celestin Hagenimana</span></h1>
     <p>Data Science • Climate & Air Quality Analytics</p>
-    <a href="#about" class="btn">READ MORE</a>
+    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">READ MORE</a>
   </div>
 </section>
 
-
-
-
-
 <!-- ABOUT SECTION -->
-<section class="section" id="about">
+<section class="section" id="about" style="display:none;">
   <h2>About Me</h2>
   <p>
     I am a student at the <strong>African Institute for Mathematical Sciences (AIMS Rwanda)</strong>,
     specializing in <strong>Data Science (2025)</strong>, with a background in
     <strong>Physics (Atmospheric and Climate Science)</strong>.
   </p>
+  <p>My motto: <strong>Learning, Respect, Empathy</strong>. I am always eager to learn and contribute to a positive environment, both professionally and personally.</p>
 </section>
 
 <!-- EDUCATION SECTION -->
-<section class="section" id="education">
+<section class="section" id="education" style="display:none;">
   <h2>Education</h2>
   <ul>
     <li><strong>AIMS Rwanda</strong> — Data Science (2025)</li>
@@ -55,7 +52,7 @@
 </section>
 
 <!-- EXPERIENCE SECTION -->
-<section class="section" id="experience">
+<section class="section" id="experience" style="display:none;">
   <h2>Experience</h2>
   <ul>
     <li><strong>Intern</strong> — Rwanda Space Agency (Weather & Air Quality Data Analysis)</li>
@@ -64,7 +61,7 @@
 </section>
 
 <!-- SKILLS SECTION -->
-<section class="section" id="skills">
+<section class="section" id="skills" style="display:none;">
   <h2>Skills</h2>
   <ul>
     <li>Python, R</li>
@@ -75,7 +72,7 @@
 </section>
 
 <!-- CONTACT SECTION -->
-<section class="section" id="contact">
+<section class="section" id="contact" style="display:none;">
   <h2>Contact</h2>
   <p>
     <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a> |
@@ -84,7 +81,19 @@
   </p>
 </section>
 
-
+<script>
+  // JavaScript function to show the clicked section and hide others
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+      if (section.id === sectionId) {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
