@@ -24,20 +24,48 @@ body {
   z-index: 1000;
 }
 
-.brand {
-  font-size: 1.1em;
-}
-
+/* BRAND */
 .brand span {
+  font-size: 1.1em;
   color: #2dd4bf;
   font-weight: bold;
 }
 
-.nav-menu a {
+/* PROFILE PHOTO */
+.profile-pic {
+  position: absolute;
+  right: 40px;
+  top: 15px;
+}
+
+.profile-pic img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2dd4bf;
+}
+
+/* NAVIGATION */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
-  font-size: 0.95em;
+  margin-left: 12px;
+  padding: 8px 20px;
+  font-size: 0.9em;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #2dd4bf;
+  color: black;
 }
 
 /* HERO SECTION */
@@ -90,15 +118,20 @@ body {
   font-size: 0.9em;
 }
 
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
 /* SECTION STYLING */
 .section {
   padding: 60px 40px;
   max-width: 1000px;
   margin: auto;
   background-color: #f4f4f4;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
+  margin-top: 120px;
 }
 
 .section h2 {
