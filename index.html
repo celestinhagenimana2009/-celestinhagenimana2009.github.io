@@ -103,24 +103,14 @@ function showSection(sectionId) {
   if (activeBtn) activeBtn.classList.add('active');
 
   if (sectionId === 'home') {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    return;
+    return; // ✅ DO NOTHING — no scroll
   }
 
   const target = document.getElementById(sectionId);
-  target.style.display = 'block';
-
-  // ✅ place section directly below HOME
-  const homeBottom =
-    document.getElementById('home').getBoundingClientRect().bottom
-    + window.pageYOffset;
-
-  window.scrollTo({
-    top: homeBottom - 20,   // small gap
-    behavior: 'smooth'
-  });
+  target.style.display = 'block'; // ✅ SHOW BELOW HOME
 }
 </script>
+
 
 </body>
 </html>
