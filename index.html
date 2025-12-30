@@ -82,13 +82,14 @@
 <section class="section" id="contact" style="display:none;">
   <h2>Contact</h2>
   <p>
-    <a href="#">GitHub</a> |
-    <a href="#">LinkedIn</a> |
-    <a href="#">Email</a>
+    <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">LinkedIn</a> |
+    <a href="mailto:your@email.com">Email</a> |
+    <a href="https://wa.me/250XXXXXXXXX" target="_blank">WhatsApp</a>
   </p>
 </section>
 
-<!-- ✅ UPDATED SCRIPT -->
+<!-- SCRIPT -->
 <script>
 function showSection(sectionId) {
   const sections = document.querySelectorAll('.section');
@@ -103,14 +104,12 @@ function showSection(sectionId) {
   if (activeBtn) activeBtn.classList.add('active');
 
   if (sectionId === 'home') {
-    return; // ✅ DO NOTHING — no scroll
+    return;
   }
 
-  const target = document.getElementById(sectionId);
-  target.style.display = 'block'; // ✅ SHOW BELOW HOME
+  document.getElementById(sectionId).style.display = 'block';
 }
 </script>
-
 
 </body>
 </html>
