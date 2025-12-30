@@ -16,7 +16,7 @@ body {
   color: #e5e7eb;
 }
 
-/* HEADER (CENTERED MENU) */
+/* HEADER: 3-COLUMN GRID (MENU PERFECT CENTER) */
 .top-header {
   position: absolute;
   top: 0;
@@ -26,20 +26,22 @@ body {
   background: transparent;
   z-index: 1000;
 
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left spacer | menu | profile */
   align-items: center;
 }
 
-/* NAV MENU CENTER */
+/* LEFT SPACER (EMPTY) */
+.header-spacer {
+  height: 1px;
+}
+
+/* NAV MENU (CENTER) */
 .nav-menu {
+  justify-self: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 12px;
-
-  /* prevents overlap with profile photo */
-  padding-right: 90px;
 }
 
 /* NAV BUTTONS */
@@ -62,9 +64,7 @@ body {
 
 /* PROFILE PHOTO (RIGHT) */
 .profile-pic {
-  position: absolute;
-  right: 40px;
-  top: 12px;
+  justify-self: end;
 }
 
 .profile-pic img {
@@ -79,23 +79,24 @@ body {
 .hero {
   min-height: 60vh;
   padding-top: 90px;
+  padding-bottom: 20px;
   position: relative;
 }
 
-/* HOME BLOCK (YOUR TOP-LEFT DESIGN) */
+/* HOME BLOCK (TOP-LEFT) */
 .hero-overlay {
   position: absolute;
   top: 110px;
   left: 60px;
   text-align: left;
-  max-width: 420px;
+  max-width: 900px;
 }
 
 /* HERO CIRCLE */
 .hero-circle {
   width: 270px;
   height: 270px;
-  margin-bottom: 18px;
+  margin: 0 0 18px 0;
   border-radius: 50%;
   padding: 6px;
   background: rgba(255,255,255,0.05);
@@ -144,6 +145,7 @@ body {
 
 /* CONTENT SECTIONS */
 .section {
+  display: block;
   padding: 60px 40px;
   max-width: 1000px;
   margin: 40px auto 70px;
@@ -170,6 +172,10 @@ ul {
   padding-left: 20px;
 }
 
+li {
+  margin-bottom: 10px;
+}
+
 /* LINKS */
 a {
   color: #2dd4bf;
@@ -189,30 +195,36 @@ a:hover {
 @media (max-width: 900px) {
   .top-header {
     padding: 16px 20px;
+    grid-template-columns: 1fr; /* stack */
+    row-gap: 10px;
   }
 
-  .profile-pic {
-    right: 18px;
+  .header-spacer {
+    display: none;
   }
 
   .nav-menu {
-    padding-right: 70px;
+    justify-self: start;
     flex-wrap: wrap;
     gap: 10px;
+  }
+
+  .profile-pic {
+    justify-self: start;
   }
 
   .hero-overlay {
     top: 95px;
     left: 20px;
-    max-width: 90%;
+    max-width: 92%;
+  }
+
+  .hero h1 {
+    font-size: 2.4em;
   }
 
   .hero-circle {
     width: 220px;
     height: 220px;
-  }
-
-  .hero h1 {
-    font-size: 2.4em;
   }
 }
