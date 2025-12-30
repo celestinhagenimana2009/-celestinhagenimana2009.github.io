@@ -11,7 +11,10 @@
 <!-- TOP HEADER -->
 <header class="top-header">
 
-  <!-- CENTERED NAVIGATION -->
+  <!-- left spacer (keeps menu perfectly centered) -->
+  <div class="header-spacer"></div>
+
+  <!-- CENTER MENU -->
   <nav class="nav-menu">
     <a class="nav-btn active" href="javascript:void(0);" onclick="showSection('home')">Home</a>
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('about')">About</a>
@@ -21,7 +24,7 @@
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <!-- PROFILE PHOTO (RIGHT) -->
+  <!-- RIGHT: profile photo -->
   <div class="profile-pic">
     <img src="images/profile.jpg" alt="Profile Photo">
   </div>
@@ -39,9 +42,7 @@
     <h1><span>Celestin Hagenimana</span></h1>
     <p>Data Science • Climate & Air Quality Analytics</p>
 
-    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">
-      READ MORE
-    </a>
+    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">READ MORE</a>
 
   </div>
 </section>
@@ -99,7 +100,6 @@
   </p>
 </section>
 
-<!-- JAVASCRIPT -->
 <script>
 function showSection(sectionId) {
   const sections = document.querySelectorAll('.section');
@@ -108,9 +108,7 @@ function showSection(sectionId) {
   const navBtns = document.querySelectorAll('.nav-btn');
   navBtns.forEach(btn => btn.classList.remove('active'));
 
-  const activeBtn = document.querySelector(
-    `.nav-btn[onclick="showSection('${sectionId}')"]`
-  );
+  const activeBtn = document.querySelector(`.nav-btn[onclick="showSection('${sectionId}')"]`);
   if (activeBtn) activeBtn.classList.add('active');
 
   if (sectionId === 'home') {
