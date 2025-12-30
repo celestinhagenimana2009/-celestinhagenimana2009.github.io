@@ -24,18 +24,25 @@
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <!-- PROFILE PHOTO -->
+  <!-- Small profile photo (top-right) -->
   <div class="profile-pic">
     <img src="images/profile.jpg" alt="Profile Photo">
   </div>
 
 </header>
 
-<!-- HERO SECTION -->
+<!-- HOME (NO FULLSCREEN COVER) -->
 <section class="hero" id="home">
   <div class="hero-overlay">
+
+    <!-- Cover photo becomes a circle -->
+    <div class="hero-circle">
+      <img src="images/hero.jpg" alt="Cover Photo">
+    </div>
+
     <h1><span>Celestin Hagenimana</span></h1>
     <p>Data Science • Climate & Air Quality Analytics</p>
+
     <a href="javascript:void(0);" onclick="showSection('about')" class="btn">READ MORE</a>
   </div>
 </section>
@@ -97,15 +104,16 @@
 <script>
 function showSection(sectionId) {
   const sections = document.querySelectorAll('.section');
-  sections.forEach(section => {
-    section.style.display = 'none';
-  });
+  sections.forEach(section => section.style.display = 'none');
 
+  // Home is always visible, just scroll to it
   if (sectionId === 'home') {
-    document.getElementById('home').style.display = 'block';
-  } else {
-    document.getElementById(sectionId).style.display = 'block';
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+    return;
   }
+
+  document.getElementById(sectionId).style.display = 'block';
+  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 
