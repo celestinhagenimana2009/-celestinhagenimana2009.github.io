@@ -11,9 +11,6 @@
 <!-- TOP HEADER -->
 <header class="top-header">
 
-  <!-- left spacer (keeps menu perfectly centered) -->
-  <div class="header-spacer"></div>
-
   <!-- CENTER MENU -->
   <nav class="nav-menu">
     <a class="nav-btn active" href="javascript:void(0);" onclick="showSection('home')">Home</a>
@@ -24,12 +21,12 @@
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <!-- RIGHT: profile photo -->
-  <div class="profile-pic">
-    <img src="images/profile.jpg" alt="Profile Photo">
-  </div>
-
 </header>
+
+<!-- PROFILE PHOTO (FLOATING TOP RIGHT) -->
+<div class="profile-pic">
+  <img src="images/profile.jpg" alt="Profile Photo">
+</div>
 
 <!-- HOME -->
 <section class="hero" id="home">
@@ -42,7 +39,9 @@
     <h1><span>Celestin Hagenimana</span></h1>
     <p>Data Science • Climate & Air Quality Analytics</p>
 
-    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">READ MORE</a>
+    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">
+      READ MORE
+    </a>
 
   </div>
 </section>
@@ -56,8 +55,7 @@
     <strong>Physics (Atmospheric and Climate Science)</strong>.
   </p>
   <p>
-    My motto is <strong>Learning, Respect, Empathy</strong>. I enjoy learning, teaching,
-    and applying data-driven solutions to real-world problems.
+    My motto is <strong>Learning, Respect, Empathy</strong>.
   </p>
 </section>
 
@@ -66,7 +64,7 @@
   <h2>Education</h2>
   <ul>
     <li><strong>AIMS Rwanda</strong> — MSc Data Science (2025)</li>
-    <li><strong>University of Rwanda, CST</strong> — BSc Physics (Atmospheric & Climate Science)</li>
+    <li><strong>University of Rwanda</strong> — BSc Physics</li>
   </ul>
 </section>
 
@@ -74,8 +72,8 @@
 <section class="section" id="experience" style="display:none;">
   <h2>Experience</h2>
   <ul>
-    <li><strong>Intern</strong> — Rwanda Space Agency (Weather & Air Quality Data Analysis)</li>
-    <li><strong>Teaching Assistant</strong> — IEE Rwanda (Mathematics)</li>
+    <li>Intern — Rwanda Space Agency</li>
+    <li>Teaching Assistant — IEE Rwanda</li>
   </ul>
 </section>
 
@@ -84,9 +82,8 @@
   <h2>Skills</h2>
   <ul>
     <li>Python, R</li>
-    <li>Data cleaning, processing & visualization</li>
-    <li>Machine learning</li>
-    <li>Climate & air quality analytics</li>
+    <li>Machine Learning</li>
+    <li>Climate & Air Quality Analytics</li>
   </ul>
 </section>
 
@@ -94,21 +91,23 @@
 <section class="section" id="contact" style="display:none;">
   <h2>Contact</h2>
   <p>
-    <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a> |
-    <a href="mailto:your@email.com">Email</a>
+    <a href="#">GitHub</a> |
+    <a href="#">LinkedIn</a> |
+    <a href="#">Email</a>
   </p>
 </section>
 
 <script>
 function showSection(sectionId) {
   const sections = document.querySelectorAll('.section');
-  sections.forEach(section => section.style.display = 'none');
+  sections.forEach(s => s.style.display = 'none');
 
   const navBtns = document.querySelectorAll('.nav-btn');
-  navBtns.forEach(btn => btn.classList.remove('active'));
+  navBtns.forEach(b => b.classList.remove('active'));
 
-  const activeBtn = document.querySelector(`.nav-btn[onclick="showSection('${sectionId}')"]`);
+  const activeBtn = document.querySelector(
+    `.nav-btn[onclick="showSection('${sectionId}')"]`
+  );
   if (activeBtn) activeBtn.classList.add('active');
 
   if (sectionId === 'home') {
