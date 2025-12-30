@@ -1,11 +1,15 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* GLOBAL BACKGROUND */
+/* =========================
+   GLOBAL BACKGROUND
+========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -14,9 +18,12 @@ body {
     radial-gradient(circle at bottom right, rgba(99,102,241,0.20), transparent 48%),
     linear-gradient(135deg, #0b1220, #0f172a);
   color: #e5e7eb;
+  line-height: 1.6; /* ✅ improves overall readability */
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .top-header {
   position: absolute;
   top: 0;
@@ -30,7 +37,9 @@ body {
   align-items: center;
 }
 
-/* NAV MENU */
+/* =========================
+   NAV MENU
+========================= */
 .nav-menu {
   display: flex;
   gap: 12px;
@@ -53,7 +62,9 @@ body {
   border-color: #2dd4bf;
 }
 
-/* PROFILE PHOTO */
+/* =========================
+   PROFILE PHOTO
+========================= */
 .profile-pic {
   position: fixed;
   top: 12px;
@@ -69,7 +80,9 @@ body {
   object-fit: cover;
 }
 
-/* HOME */
+/* =========================
+   HOME / HERO
+========================= */
 .hero {
   min-height: 60vh;
   padding-top: 90px;
@@ -83,7 +96,9 @@ body {
   max-width: 420px;
 }
 
-/* HERO IMAGE */
+/* =========================
+   HERO IMAGE
+========================= */
 .hero-circle {
   width: 400px;
   height: 400px;
@@ -101,9 +116,12 @@ body {
   object-fit: cover;
 }
 
-/* TEXT */
+/* =========================
+   HERO TEXT
+========================= */
 .hero h1 {
   font-size: 2em;
+  margin-bottom: 10px; /* ✅ add spacing below heading */
 }
 
 .hero h1 span {
@@ -113,9 +131,12 @@ body {
 .hero p {
   margin-top: 14px;
   opacity: 0.9;
+  line-height: 1.7; /* ✅ better spacing in hero text */
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 .btn {
   margin-top: 22px;
   display: inline-block;
@@ -124,20 +145,45 @@ body {
   border: 1.8px solid rgba(255,255,255,0.75);
   color: white;
   text-decoration: none;
+  transition: all 0.25s ease;
 }
 
 .btn:hover {
   background-color: #2dd4bf;
   color: #0b1220;
+  border-color: #2dd4bf;
 }
 
-/* CONTENT */
+/* =========================
+   CONTENT SECTIONS
+========================= */
 .section {
   padding: 60px 40px;
   max-width: 1000px;
   margin: 40px auto 70px;
   border-radius: 18px;
   background: rgba(255,255,255,0.08);
+}
+
+/* ✅ FIX SMALL SPACING INSIDE SECTIONS (because RESET removed default spacing) */
+.section h2 {
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.section p {
+  margin: 0 0 14px 0;
+  line-height: 1.7;
+}
+
+.section ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.section li {
+  margin: 10px 0;
+  line-height: 1.6;
 }
 
 /* ✅ FORCE CONTACT LINKS GREEN */
@@ -154,7 +200,9 @@ body {
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .profile-pic {
     right: 18px;
@@ -164,5 +212,15 @@ body {
     left: 20px;
     top: 95px;
     max-width: 92%;
+  }
+
+  .hero-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .section {
+    padding: 40px 18px;
+    margin: 22px auto 40px;
   }
 }
