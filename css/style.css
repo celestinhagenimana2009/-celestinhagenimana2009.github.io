@@ -16,54 +16,36 @@ body {
   color: #e5e7eb;
 }
 
-/* HEADER (NO DARK BAR) */
+/* HEADER (CENTERED MENU) */
 .top-header {
-  position: absolute;          /* not fixed */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 18px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: transparent;     /* removes dark bar */
-  backdrop-filter: none;       /* removes blur bar */
+  background: transparent;
   z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* BRAND */
-.brand span {
-  font-size: 1.1em;
-  color: #2dd4bf;
-  font-weight: bold;
-}
-
-/* PROFILE PHOTO */
-.profile-pic {
-  position: absolute;
-  right: 40px;
-  top: 12px;
-}
-
-.profile-pic img {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #2dd4bf;
-}
-
-/* NAV */
+/* NAV MENU CENTER */
 .nav-menu {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  /* prevents overlap with profile photo */
+  padding-right: 90px;
 }
 
+/* NAV BUTTONS */
 .nav-btn {
   color: white;
   text-decoration: none;
-  margin-left: 12px;
   padding: 8px 18px;
   font-size: 0.9em;
   border-radius: 999px;
@@ -78,30 +60,42 @@ body {
   border-color: #2dd4bf;
 }
 
-/* HOME (FORCE TOP-LEFT POSITION) */
+/* PROFILE PHOTO (RIGHT) */
+.profile-pic {
+  position: absolute;
+  right: 40px;
+  top: 12px;
+}
+
+.profile-pic img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2dd4bf;
+}
+
+/* HOME */
 .hero {
   min-height: 60vh;
   padding-top: 90px;
-  padding-bottom: 20px;
-
-  position: relative; /* ✅ allows absolute positioning inside */
+  position: relative;
 }
 
-/* HOME CONTENT WRAPPER (TOP-LEFT) */
+/* HOME BLOCK (YOUR TOP-LEFT DESIGN) */
 .hero-overlay {
-  position: absolute; /* ✅ forced */
-  top: 110px;         /* ✅ below header */
-  left: 60px;         /* ✅ left side */
-
+  position: absolute;
+  top: 110px;
+  left: 60px;
   text-align: left;
-  max-width: 900px;
+  max-width: 420px;
 }
 
 /* HERO CIRCLE */
 .hero-circle {
   width: 270px;
   height: 270px;
-  margin: 0 0 18px 0;
+  margin-bottom: 18px;
   border-radius: 50%;
   padding: 6px;
   background: rgba(255,255,255,0.05);
@@ -150,7 +144,6 @@ body {
 
 /* CONTENT SECTIONS */
 .section {
-  display: block;
   padding: 60px 40px;
   max-width: 1000px;
   margin: 40px auto 70px;
@@ -175,10 +168,6 @@ body {
 
 ul {
   padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
 }
 
 /* LINKS */
@@ -206,21 +195,24 @@ a:hover {
     right: 18px;
   }
 
-  /* keep home block top-left on small screens */
+  .nav-menu {
+    padding-right: 70px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
   .hero-overlay {
     top: 95px;
     left: 20px;
-    max-width: 92%;
-    text-align: left;
-  }
-
-  .hero h1 {
-    font-size: 2.4em;
+    max-width: 90%;
   }
 
   .hero-circle {
     width: 220px;
     height: 220px;
-    margin: 0 0 14px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.4em;
   }
 }
