@@ -10,8 +10,6 @@
 
 <!-- TOP HEADER -->
 <header class="top-header">
-
-  <!-- CENTER MENU -->
   <nav class="nav-menu">
     <a class="nav-btn active" href="javascript:void(0);" onclick="showSection('home')">Home</a>
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('about')">About</a>
@@ -20,10 +18,9 @@
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('skills')">Skills</a>
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
   </nav>
-
 </header>
 
-<!-- PROFILE PHOTO (FLOATING TOP RIGHT) -->
+<!-- PROFILE PHOTO -->
 <div class="profile-pic">
   <img src="images/profile.jpg" alt="Profile Photo">
 </div>
@@ -31,7 +28,6 @@
 <!-- HOME -->
 <section class="hero" id="home">
   <div class="hero-overlay">
-
     <div class="hero-circle">
       <img src="images/hero.jpg" alt="Cover Photo">
     </div>
@@ -42,7 +38,6 @@
     <a href="javascript:void(0);" onclick="showSection('about')" class="btn">
       READ MORE
     </a>
-
   </div>
 </section>
 
@@ -51,11 +46,7 @@
   <h2>About Me</h2>
   <p>
     I am a student at the <strong>African Institute for Mathematical Sciences (AIMS Rwanda)</strong>,
-    specializing in <strong>Data Science (2025)</strong>, with a background in
-    <strong>Physics (Atmospheric and Climate Science)</strong>.
-  </p>
-  <p>
-    My motto is <strong>Learning, Respect, Empathy</strong>.
+    specializing in <strong>Data Science (2025)</strong>, with a background in Physics.
   </p>
 </section>
 
@@ -97,6 +88,7 @@
   </p>
 </section>
 
+<!-- ✅ UPDATED SCRIPT -->
 <script>
 function showSection(sectionId) {
   const sections = document.querySelectorAll('.section');
@@ -111,13 +103,22 @@ function showSection(sectionId) {
   if (activeBtn) activeBtn.classList.add('active');
 
   if (sectionId === 'home') {
-    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     return;
   }
 
   const target = document.getElementById(sectionId);
   target.style.display = 'block';
-  target.scrollIntoView({ behavior: 'smooth' });
+
+  // ✅ place section directly below HOME
+  const homeBottom =
+    document.getElementById('home').getBoundingClientRect().bottom
+    + window.pageYOffset;
+
+  window.scrollTo({
+    top: homeBottom - 20,   // small gap
+    behavior: 'smooth'
+  });
 }
 </script>
 
