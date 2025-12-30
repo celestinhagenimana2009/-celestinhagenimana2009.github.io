@@ -144,6 +144,17 @@ body {
   background: rgba(255,255,255,0.08);
 }
 
+/* ✅ MAKE CONTACT LINKS GREEN (including visited links) */
+.section a,
+.section a:visited {
+  color: #2dd4bf;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .profile-pic {
