@@ -16,7 +16,7 @@ body {
   color: #e5e7eb;
 }
 
-/* HEADER — TRUE CENTER */
+/* HEADER */
 .top-header {
   position: absolute;
   top: 0;
@@ -25,20 +25,17 @@ body {
   padding: 18px 60px;
   background: transparent;
   z-index: 1000;
-
   display: flex;
-  justify-content: center; /* ✅ TRUE CENTER */
+  justify-content: center;
   align-items: center;
 }
 
 /* NAV MENU */
 .nav-menu {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
-/* NAV BUTTONS */
 .nav-btn {
   color: white;
   text-decoration: none;
@@ -56,7 +53,7 @@ body {
   border-color: #2dd4bf;
 }
 
-/* PROFILE PHOTO — FLOATING (NO LAYOUT EFFECT) */
+/* PROFILE PHOTO */
 .profile-pic {
   position: fixed;
   top: 12px;
@@ -79,7 +76,6 @@ body {
   position: relative;
 }
 
-/* HOME BLOCK */
 .hero-overlay {
   position: absolute;
   top: 110px;
@@ -144,10 +140,13 @@ body {
   background: rgba(255,255,255,0.08);
 }
 
-/* ✅ MAKE CONTACT LINKS GREEN (including visited links) */
+/* ✅ FORCE CONTACT LINKS GREEN */
 .section a,
-.section a:visited {
-  color: #2dd4bf;
+.section a:link,
+.section a:visited,
+.section a:hover,
+.section a:active {
+  color: #2dd4bf !important;
   text-decoration: none;
 }
 
