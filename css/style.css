@@ -5,17 +5,18 @@
   box-sizing: border-box;
 }
 
-/* GLOBAL BACKGROUND (beautiful) */
+/* GLOBAL BACKGROUND */
 body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, rgba(45,212,191,0.18), transparent 45%),
-              radial-gradient(circle at bottom right, rgba(99,102,241,0.20), transparent 48%),
-              linear-gradient(135deg, #0b1220, #0f172a);
+  background:
+    radial-gradient(circle at top left, rgba(45,212,191,0.18), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(99,102,241,0.20), transparent 48%),
+    linear-gradient(135deg, #0b1220, #0f172a);
   color: #e5e7eb;
 }
 
-/* TOP HEADER */
+/* HEADER */
 .top-header {
   position: fixed;
   top: 0;
@@ -24,9 +25,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
   backdrop-filter: blur(8px);
-  color: white;
   z-index: 1000;
 }
 
@@ -37,7 +37,7 @@ body {
   font-weight: bold;
 }
 
-/* PROFILE PHOTO (top-right small circle) */
+/* PROFILE PHOTO */
 .profile-pic {
   position: absolute;
   right: 40px;
@@ -52,10 +52,9 @@ body {
   border: 2px solid #2dd4bf;
 }
 
-/* NAVIGATION */
+/* NAV */
 .nav-menu {
   display: flex;
-  align-items: center;
 }
 
 .nav-btn {
@@ -69,48 +68,48 @@ body {
   transition: all 0.25s ease;
 }
 
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn.active {
   background-color: #2dd4bf;
   color: #0b1220;
+  border-color: #2dd4bf;
 }
 
-/* HOME SECTION (no full screen cover image) */
+/* HOME */
 .hero {
   min-height: 100vh;
-  padding-top: 110px; /* space for fixed header */
+  padding-top: 110px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .hero-overlay {
-  width: 100%;
-  max-width: 950px;
-  padding: 30px 20px 60px;
   text-align: center;
+  max-width: 900px;
 }
 
-/* COVER PHOTO AS A LARGE CIRCLE */
+/* HERO CIRCLE */
 .hero-circle {
-  width: 260px;      /* large but not too large */
-  height: 260px;
-  margin: 0 auto 24px;
+  width: 270px;
+  height: 270px;
+  margin: 0 auto 26px;
   border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid rgba(45,212,191,0.9);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+  padding: 6px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.5);
 }
 
 .hero-circle img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   object-fit: cover;
 }
 
 /* HERO TEXT */
 .hero h1 {
   font-size: 3em;
-  line-height: 1.1;
 }
 
 .hero h1 span {
@@ -120,7 +119,7 @@ body {
 .hero p {
   margin-top: 14px;
   font-size: 1.08em;
-  color: rgba(229,231,235,0.9);
+  opacity: 0.9;
 }
 
 /* BUTTON */
@@ -128,44 +127,42 @@ body {
   display: inline-block;
   margin-top: 26px;
   padding: 12px 34px;
+  border-radius: 999px;
   border: 1.8px solid rgba(255,255,255,0.75);
   color: white;
   text-decoration: none;
-  border-radius: 999px;
-  font-size: 0.95em;
   transition: all 0.25s ease;
 }
 
 .btn:hover {
   background-color: #2dd4bf;
-  border-color: #2dd4bf;
   color: #0b1220;
+  border-color: #2dd4bf;
 }
 
-/* CONTENT SECTIONS (beautiful background instead of white) */
+/* CONTENT SECTIONS */
 .section {
+  display: block;
   padding: 60px 40px;
   max-width: 1000px;
   margin: 40px auto 70px;
   border-radius: 18px;
-
-  /* new background style */
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
-
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  animation: fadeIn 0.35s ease-in-out;
 }
 
 .section h2 {
   font-size: 2em;
   margin-bottom: 18px;
-  color: #e5e7eb;
 }
 
-.section p, .section li {
-  color: rgba(229,231,235,0.9);
+.section p,
+.section li {
   line-height: 1.7;
+  opacity: 0.95;
 }
 
 ul {
@@ -178,7 +175,6 @@ li {
 
 /* LINKS */
 a {
-  text-decoration: none;
   color: #2dd4bf;
 }
 
@@ -186,12 +182,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive tweak */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .top-header {
     padding: 16px 20px;
