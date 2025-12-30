@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- TOP HEADER -->
+<!-- TOP HEADER (NO DARK BAR) -->
 <header class="top-header">
 
   <div class="brand">
@@ -42,9 +42,7 @@
     <h1><span>Celestin Hagenimana</span></h1>
     <p>Data Science • Climate & Air Quality Analytics</p>
 
-    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">
-      READ MORE
-    </a>
+    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">READ MORE</a>
 
   </div>
 </section>
@@ -105,28 +103,25 @@
 <!-- JAVASCRIPT -->
 <script>
 function showSection(sectionId) {
-
-  // hide all content sections
+  // Hide all content sections
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => section.style.display = 'none');
 
-  // remove active state
+  // Remove active state
   const navBtns = document.querySelectorAll('.nav-btn');
   navBtns.forEach(btn => btn.classList.remove('active'));
 
-  // activate clicked button
-  const activeBtn = document.querySelector(
-    `.nav-btn[onclick="showSection('${sectionId}')"]`
-  );
+  // Activate clicked button
+  const activeBtn = document.querySelector(`.nav-btn[onclick="showSection('${sectionId}')"]`);
   if (activeBtn) activeBtn.classList.add('active');
 
-  // home behavior
+  // Home behavior
   if (sectionId === 'home') {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
     return;
   }
 
-  // show selected section
+  // Show selected section
   const target = document.getElementById(sectionId);
   target.style.display = 'block';
   target.scrollIntoView({ behavior: 'smooth' });
