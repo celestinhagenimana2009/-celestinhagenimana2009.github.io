@@ -119,10 +119,8 @@ body {
 .panel-inner {
   height: 100%;
   padding: 28px 34px;
-  overflow: auto;
+  overflow: auto; /* internal scroll if content is long */
 }
-
-
 
 /* HOME CENTERING */
 .home-inner {
