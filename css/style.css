@@ -78,32 +78,30 @@ body {
   border-color: #2dd4bf;
 }
 
-/* HOME (TOP-LEFT LAYOUT) */
+/* HOME (FORCE TOP-LEFT POSITION) */
 .hero {
   min-height: 60vh;
-  padding-top: 90px;            /* space for the header buttons */
+  padding-top: 90px;
   padding-bottom: 20px;
 
-  display: flex;
-  justify-content: flex-start;  /* move to left */
-  align-items: flex-start;      /* move to top */
+  position: relative; /* ✅ allows absolute positioning inside */
 }
 
-/* HOME CONTENT WRAPPER */
+/* HOME CONTENT WRAPPER (TOP-LEFT) */
 .hero-overlay {
-  text-align: left;             /* left align text */
-  max-width: 900px;
+  position: absolute; /* ✅ forced */
+  top: 110px;         /* ✅ below header */
+  left: 60px;         /* ✅ left side */
 
-  /* move the whole block to top-left */
-  margin-left: 60px;
-  margin-top: 20px;
+  text-align: left;
+  max-width: 900px;
 }
 
 /* HERO CIRCLE */
 .hero-circle {
   width: 270px;
   height: 270px;
-  margin: 0 0 18px 0;           /* no auto-centering */
+  margin: 0 0 18px 0;
   border-radius: 50%;
   padding: 6px;
   background: rgba(255,255,255,0.05);
@@ -208,9 +206,11 @@ a:hover {
     right: 18px;
   }
 
+  /* keep home block top-left on small screens */
   .hero-overlay {
-    margin-left: 20px;
-    margin-top: 10px;
+    top: 95px;
+    left: 20px;
+    max-width: 92%;
     text-align: left;
   }
 
