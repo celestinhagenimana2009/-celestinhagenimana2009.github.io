@@ -16,7 +16,7 @@
   </div>
 
   <nav class="nav-menu">
-    <a class="nav-btn" href="javascript:void(0);" onclick="showSection('home')">Home</a>
+    <a class="nav-btn active" href="javascript:void(0);" onclick="showSection('home')">Home</a>
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('about')">About</a>
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('education')">Education</a>
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('experience')">Experience</a>
@@ -24,18 +24,17 @@
     <a class="nav-btn" href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <!-- Small profile photo (top-right) -->
+  <!-- Small profile photo -->
   <div class="profile-pic">
     <img src="images/profile.jpg" alt="Profile Photo">
   </div>
 
 </header>
 
-<!-- HOME (NO FULLSCREEN COVER) -->
+<!-- HOME -->
 <section class="hero" id="home">
   <div class="hero-overlay">
 
-    <!-- Cover photo becomes a circle -->
     <div class="hero-circle">
       <img src="images/hero.jpg" alt="Cover Photo">
     </div>
@@ -43,11 +42,14 @@
     <h1><span>Celestin Hagenimana</span></h1>
     <p>Data Science • Climate & Air Quality Analytics</p>
 
-    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">READ MORE</a>
+    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">
+      READ MORE
+    </a>
+
   </div>
 </section>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section class="section" id="about" style="display:none;">
   <h2>About Me</h2>
   <p>
@@ -56,21 +58,21 @@
     <strong>Physics (Atmospheric and Climate Science)</strong>.
   </p>
   <p>
-    My motto: <strong>Learning, Respect, Empathy</strong>. I am always eager to learn and
-    contribute to a positive environment, both professionally and personally.
+    My motto is <strong>Learning, Respect, Empathy</strong>. I enjoy learning, teaching,
+    and applying data-driven solutions to real-world problems.
   </p>
 </section>
 
-<!-- EDUCATION SECTION -->
+<!-- EDUCATION -->
 <section class="section" id="education" style="display:none;">
   <h2>Education</h2>
   <ul>
-    <li><strong>AIMS Rwanda</strong> — Data Science (2025)</li>
+    <li><strong>AIMS Rwanda</strong> — MSc Data Science (2025)</li>
     <li><strong>University of Rwanda, CST</strong> — BSc Physics (Atmospheric & Climate Science)</li>
   </ul>
 </section>
 
-<!-- EXPERIENCE SECTION -->
+<!-- EXPERIENCE -->
 <section class="section" id="experience" style="display:none;">
   <h2>Experience</h2>
   <ul>
@@ -79,18 +81,18 @@
   </ul>
 </section>
 
-<!-- SKILLS SECTION -->
+<!-- SKILLS -->
 <section class="section" id="skills" style="display:none;">
   <h2>Skills</h2>
   <ul>
     <li>Python, R</li>
-    <li>Data cleaning, processing, visualization</li>
+    <li>Data cleaning, processing & visualization</li>
     <li>Machine learning</li>
     <li>Climate & air quality analytics</li>
   </ul>
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section class="section" id="contact" style="display:none;">
   <h2>Contact</h2>
   <p>
@@ -103,17 +105,31 @@
 <!-- JAVASCRIPT -->
 <script>
 function showSection(sectionId) {
+
+  // hide all content sections
   const sections = document.querySelectorAll('.section');
   sections.forEach(section => section.style.display = 'none');
 
-  // Home is always visible, just scroll to it
+  // remove active state
+  const navBtns = document.querySelectorAll('.nav-btn');
+  navBtns.forEach(btn => btn.classList.remove('active'));
+
+  // activate clicked button
+  const activeBtn = document.querySelector(
+    `.nav-btn[onclick="showSection('${sectionId}')"]`
+  );
+  if (activeBtn) activeBtn.classList.add('active');
+
+  // home behavior
   if (sectionId === 'home') {
     document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
     return;
   }
 
-  document.getElementById(sectionId).style.display = 'block';
-  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  // show selected section
+  const target = document.getElementById(sectionId);
+  target.style.display = 'block';
+  target.scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 
