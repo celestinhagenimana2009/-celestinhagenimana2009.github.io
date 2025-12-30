@@ -80,7 +80,7 @@ body {
 
 /* HOME */
 .hero {
-  min-height: 100vh;
+  min-height: 60vh;
   padding-top: 90px;           /* space for the header buttons */
   display: flex;
   justify-content: center;
