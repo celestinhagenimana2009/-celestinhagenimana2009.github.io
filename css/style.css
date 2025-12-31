@@ -18,7 +18,7 @@ body {
     radial-gradient(circle at bottom right, rgba(99,102,241,0.20), transparent 48%),
     linear-gradient(135deg, #0b1220, #0f172a);
   color: #e5e7eb;
-  line-height: 1.6; /* ✅ improves overall readability */
+  line-height: 1.6;
 }
 
 /* =========================
@@ -63,24 +63,6 @@ body {
 }
 
 /* =========================
-   PROFILE PHOTO
-========================= */
-.profile-pic {
-  position: fixed;
-  top: 12px;
-  right: 40px;
-  z-index: 2000;
-}
-
-.profile-pic img {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  border: 2px solid #2dd4bf;
-  object-fit: cover;
-}
-
-/* =========================
    HOME / HERO
 ========================= */
 .hero {
@@ -121,7 +103,7 @@ body {
 ========================= */
 .hero h1 {
   font-size: 2em;
-  margin-bottom: 10px; /* ✅ add spacing below heading */
+  margin-bottom: 10px;
 }
 
 .hero h1 span {
@@ -131,7 +113,7 @@ body {
 .hero p {
   margin-top: 14px;
   opacity: 0.9;
-  line-height: 1.7; /* ✅ better spacing in hero text */
+  line-height: 1.7;
 }
 
 /* =========================
@@ -165,7 +147,7 @@ body {
   background: rgba(255,255,255,0.08);
 }
 
-/* ✅ FIX SMALL SPACING INSIDE SECTIONS (because RESET removed default spacing) */
+/* Spacing inside sections */
 .section h2 {
   margin: 0 0 16px 0;
   line-height: 1.2;
@@ -186,13 +168,9 @@ body {
   line-height: 1.6;
 }
 
-/* ✅ FORCE CONTACT LINKS GREEN */
-.section a,
-.section a:link,
-.section a:visited,
-.section a:hover,
-.section a:active {
-  color: #2dd4bf !important;
+/* Links */
+.section a {
+  color: #2dd4bf;
   text-decoration: none;
 }
 
@@ -204,10 +182,6 @@ body {
    RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
-  .profile-pic {
-    right: 18px;
-  }
-
   .hero-overlay {
     left: 20px;
     top: 95px;
