@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
   <title>Celestin Hagenimana | Data Scientist | AIMS Rwanda</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta -->
@@ -39,207 +37,265 @@
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-<h1 style="display:none;">Celestin Hagenimana</h1>
+  <h1 style="display:none;">Celestin Hagenimana</h1>
 
-<!-- TOP HEADER -->
-<header class="top-header">
-  <nav class="nav-menu">
-    <a class="nav-btn active" href="javascript:void(0);" onclick="showSection('home')">Home</a>
-    <a class="nav-btn" href="javascript:void(0);" onclick="showSection('about')">About</a>
-    <a class="nav-btn" href="javascript:void(0);" onclick="showSection('education')">Education</a>
-    <a class="nav-btn" href="javascript:void(0);" onclick="showSection('experience')">Experience</a>
-    <a class="nav-btn" href="javascript:void(0);" onclick="showSection('projects')">Projects</a>
-    <a class="nav-btn" href="javascript:void(0);" onclick="showSection('skills')">Skills</a>
-    <a class="nav-btn" href="javascript:void(0);" onclick="showSection('contact')">Contact</a>
-  </nav>
-</header>
+  <!-- TOP HEADER -->
+  <header class="top-header">
+    <nav class="nav-menu">
+      <a class="nav-btn active" href="#" data-section="home">Home</a>
+      <a class="nav-btn" href="#" data-section="about">About</a>
+      <a class="nav-btn" href="#" data-section="education">Education</a>
+      <a class="nav-btn" href="#" data-section="experience">Experience</a>
+      <a class="nav-btn" href="#" data-section="projects">Projects</a>
+      <a class="nav-btn" href="#" data-section="skills">Skills</a>
+      <a class="nav-btn" href="#" data-section="contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- HOME -->
-<section class="hero" id="home">
-  <div class="hero-overlay">
-    <div class="hero-circle">
-      <img src="images/hero.png" alt="Celestin Hagenimana profile photo">
+  <!-- HOME -->
+  <section class="hero active-section" id="home">
+    <div class="hero-overlay">
+      <div class="hero-circle">
+        <img src="images/hero.png" alt="Celestin Hagenimana profile photo">
+      </div>
+
+      <h1><span>Celestin Hagenimana</span></h1>
+      <p>Data Science • Climate &amp; Air Quality Analytics</p>
+
+      <a href="#" class="btn" id="read-more-btn">READ MORE</a>
     </div>
+  </section>
 
-    <h1><span>Celestin Hagenimana</span></h1>
-    <p>Data Science • Climate & Air Quality Analytics</p>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>About Me</h2>
 
-    <a href="javascript:void(0);" onclick="showSection('about')" class="btn">
-      READ MORE
-    </a>
-  </div>
-</section>
+    <p><em>Learning with humility, working with dedication, and striving for excellence.</em></p>
 
-<!-- ABOUT -->
-<section class="section" id="about" style="display:none;">
-  <h2>About Me</h2>
-
-  <p><em>Learning with humility, working with dedication, and striving for excellence.</em></p>
-
-  <p>
-    I am a student at the <strong>African Institute for Mathematical Sciences (AIMS Rwanda)</strong>,
-    specializing in <strong>Data Science</strong>. I am motivated by data-driven approaches
-    to understand complex systems, extract meaningful insights, and support informed
-    decision-making, particularly in climate and air quality analytics.
-  </p>
-</section>
-
-<!-- EDUCATION -->
-<section class="section" id="education" style="display:none;">
-  <h2>Education</h2>
-
-  <div class="education-item">
-    <div class="education-header">
-      <h3>Master of Science in Mathematical Sciences</h3>
-      <span class="education-date">2025 – June 2026</span>
-    </div>
-    <p class="education-place">
-      African Institute for Mathematical Sciences (AIMS) Rwanda
+    <p>
+      I am a student at the <strong>African Institute for Mathematical Sciences (AIMS Rwanda)</strong>,
+      specializing in <strong>Data Science</strong>. I am motivated by data-driven approaches
+      to understand complex systems, extract meaningful insights, and support informed
+      decision-making, particularly in climate and air quality analytics.
     </p>
-    <p><em>Specialization: Data Science</em></p>
-  </div>
+  </section>
 
-  <div class="education-item">
-    <div class="education-header">
-      <h3>Bachelor of Physics (Hons)</h3>
-      <span class="education-date">2022 – 2025</span>
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <h2>Education</h2>
+
+    <div class="education-item">
+      <div class="education-header">
+        <h3>Master of Science in Mathematical Sciences</h3>
+        <span class="education-date">2025 – June 2026</span>
+      </div>
+      <p class="education-place">
+        African Institute for Mathematical Sciences (AIMS) Rwanda
+      </p>
+      <p><em>Specialization: Data Science</em></p>
     </div>
-    <p class="education-place">
-      University of Rwanda, College of Science and Technology
+
+    <div class="education-item">
+      <div class="education-header">
+        <h3>Bachelor of Physics (Hons)</h3>
+        <span class="education-date">2022 – 2025</span>
+      </div>
+      <p class="education-place">
+        University of Rwanda, College of Science and Technology
+      </p>
+      <p><em>Option: Atmospheric and Climate Science</em></p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <h3>Climate Science Intern</h3>
+        <span class="experience-date">Jan 2025 – Mar 2025</span>
+      </div>
+      <p class="experience-place">Rwanda Space Agency (RSA), Kigali, Rwanda</p>
+      <ul>
+        <li>Assisted in analyzing climate and atmospheric data.</li>
+        <li>Supported data interpretation for environmental monitoring and research.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <h3>Teaching Assistant <span>(Mathematics)</span></h3>
+        <span class="experience-date">Nov 2021 – May 2022</span>
+      </div>
+      <p class="experience-place">
+        G.S. Nyamata Catholique High School, Nyamata Town, Bugesera District<br>
+        Eastern Province, Rwanda
+      </p>
+      <ul>
+        <li>Assisted Senior Six students with Mathematics problem-solving and exam preparation.</li>
+        <li>Served as Team Leader for Inspire, Educate and Empower (IEE) Rwanda Teaching Assistants.</li>
+        <li>Awarded a Teaching Assistant Certificate.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-item">
+      <h3>Extracting Key Patterns in Text Data Using SVD</h3>
+      <p><em>Academic project completed at AIMS Rwanda, implemented in Julia.</em></p>
+      <ul>
+        <li>Developed a text analysis project to extract hidden semantic patterns from a collection of documents.</li>
+        <li>Converted raw text into a structured numerical form for document comparison and semantic analysis.</li>
+        <li>Applied Singular Value Decomposition (SVD) to reduce dimensionality and uncover latent relationships in text data.</li>
+        <li>Used Latent Semantic Analysis (LSA) to study how documents are related beyond direct word matching.</li>
+        <li>Computed document similarity to evaluate how closely texts are connected in semantic space.</li>
+        <li>Implemented query projection to compare search terms with the existing document collection.</li>
+        <li>Generated visual outputs to support the interpretation of semantic similarity patterns.</li>
+        <li>Demonstrated how linear algebra and computational methods can be used in text mining and pattern extraction.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <h3>Ion-Acoustic Solitary Waves in Magnetized Plasma</h3>
+      <p><em>Undergraduate research project completed at UR-CST.</em></p>
+      <ul>
+        <li>Conducted a final year research project on ion-acoustic solitary waves in a magnetized plasma system.</li>
+        <li>Developed a theoretical plasma model involving Tsallis distributed electrons and cold ions.</li>
+        <li>Applied the Sagdeev potential method to study the existence and propagation of nonlinear solitary waves.</li>
+        <li>Derived the energy-like equation and Sagdeev potential governing wave behavior in the plasma system.</li>
+        <li>Investigated the effects of Mach number, temperature ratio, magnetic field obliqueness, and non-extensive parameter on solitary wave dynamics.</li>
+        <li>Performed symbolic and numerical computations in Python.</li>
+        <li>Produced graphical results in Python to analyze changes in wave amplitude, width, and stability.</li>
+        <li>Connected the findings to applications in space plasma physics and laboratory plasma modelling.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <h2>Professional Skills</h2>
+    <ul>
+      <li>Python and R Programming</li>
+      <li>Exploratory Data Analysis (EDA)</li>
+      <li>Data Cleaning and Preprocessing</li>
+      <li>Statistical and Predictive Modeling</li>
+      <li>Machine Learning Model Development</li>
+      <li>Data Visualization and Communication</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+
+    <!-- Replace YOUR_FORM_ID with your real Formspree ID -->
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
+
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" required placeholder="Your email">
+
+      <label for="message">Your message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Your message"></textarea>
+
+      <button type="submit">Send</button>
+      <p id="form-status"></p>
+    </form>
+
+    <p>Email: <a href="mailto:lacelehagenimana@gmail.com">lacelehagenimana@gmail.com</a></p>
+
+    <p>
+      <a href="https://github.com/celestinhagenimana2009" target="_blank" rel="noopener noreferrer">GitHub</a> |
+      <a href="https://www.linkedin.com/in/celestin-hagenimana-a69232375/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+      <a href="https://wa.me/250787091656" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </p>
-    <p><em>Option: Atmospheric and Climate Science</em></p>
-  </div>
+  </section>
 
-</section>
+  <script>
+    const heroSection = document.getElementById("home");
+    const contentSections = document.querySelectorAll(".section");
+    const navButtons = document.querySelectorAll(".nav-btn");
+    const readMoreBtn = document.getElementById("read-more-btn");
 
-<!-- EXPERIENCE -->
-<section class="section" id="experience" style="display:none;">
-  <h2>Experience</h2>
+    function showSection(sectionId) {
+      heroSection.style.display = "none";
+      contentSections.forEach(section => {
+        section.style.display = "none";
+      });
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <h3>Climate Science Intern</h3>
-      <span class="experience-date">Jan 2025 – Mar 2025</span>
-    </div>
-    <p class="experience-place">Rwanda Space Agency (RSA), Kigali, Rwanda</p>
-    <ul>
-      <li>Assisted in analyzing climate and atmospheric data.</li>
-      <li>Supported data interpretation for environmental monitoring and research.</li>
-    </ul>
-  </div>
+      navButtons.forEach(btn => btn.classList.remove("active"));
 
-  <div class="experience-item">
-    <div class="experience-header">
-      <h3>Teaching Assistant <span>(Mathematics)</span></h3>
-      <span class="experience-date">Nov 2021 – May 2022</span>
-    </div>
-    <p class="experience-place">
-      G.S. Nyamata Catholique High School, Nyamata Town, Bugesera District<br>
-      Eastern Province, Rwanda
-    </p>
-    <ul>
-      <li>Assisted Senior Six students with Mathematics problem-solving and exam preparation.</li>
-      <li>Served as Team Leader for Inspire, Educate and Empower (IEE) Rwanda Teaching Assistants.</li>
-      <li>
-        Awarded a Teaching Assistant Certificate
-        <a href="#" target="_blank" rel="noopener noreferrer"> </a>
-      </li>
-    </ul>
-  </div>
-</section>
+      if (sectionId === "home") {
+        heroSection.style.display = "block";
+      } else {
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+          targetSection.style.display = "block";
+        }
+      }
 
-<!-- PROJECTS -->
-<section class="section" id="projects" style="display:none;">
-  <h2>Projects</h2>
+      const activeBtn = document.querySelector(`.nav-btn[data-section="${sectionId}"]`);
+      if (activeBtn) {
+        activeBtn.classList.add("active");
+      }
+    }
 
-  <div class="project-item">
-    <h3>Extracting Key Patterns in Text Data Using SVD</h3>
-    <p><em>Academic project completed at AIMS Rwanda, implemented in Julia.</em></p>
-    <ul>
-      <li>Developed a text analysis project to extract hidden semantic patterns from a collection of documents.</li>
-      <li>Converted raw text into a structured numerical form for document comparison and semantic analysis.</li>
-      <li>Applied Singular Value Decomposition (SVD) to reduce dimensionality and uncover latent relationships in text data.</li>
-      <li>Used Latent Semantic Analysis (LSA) to study how documents are related beyond direct word matching.</li>
-      <li>Computed document similarity to evaluate how closely texts are connected in semantic space.</li>
-      <li>Implemented query projection to compare search terms with the existing document collection.</li>
-      <li>Generated visual outputs to support the interpretation of semantic similarity patterns.</li>
-      <li>Demonstrated how linear algebra and computational methods can be used in text mining and pattern extraction.</li>
-    </ul>
-  </div>
+    navButtons.forEach(button => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute("data-section");
+        showSection(sectionId);
+      });
+    });
 
-  <div class="project-item">
-    <h3>Ion-Acoustic Solitary Waves in Magnetized Plasma</h3>
-    <p><em>Undergraduate research project completed at UR-CST.</em></p>
-    <ul>
-      <li>Conducted a final year research project on ion-acoustic solitary waves in a magnetized plasma system.</li>
-      <li>Developed a theoretical plasma model involving Tsallis distributed electrons and cold ions.</li>
-      <li>Applied the Sagdeev potential method to study the existence and propagation of nonlinear solitary waves.</li>
-      <li>Derived the energy-like equation and Sagdeev potential governing wave behavior in the plasma system.</li>
-      <li>Investigated the effects of Mach number, temperature ratio, magnetic field obliqueness, and non-extensive parameter on solitary wave dynamics.</li>
-      <li>Performed symbolic and numerical computations in Python.</li>
-      <li>Produced graphical results in Python to analyze changes in wave amplitude, width, and stability.</li>
-      <li>Connected the findings to applications in space plasma physics and laboratory plasma modelling.</li>
-    </ul>
-  </div>
-</section>
+    readMoreBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      showSection("about");
+    });
 
-<!-- SKILLS -->
-<section class="section" id="skills" style="display:none;">
-  <h2>Professional Skills</h2>
-  <ul>
-    <li>Python and R Programming</li>
-    <li>Exploratory Data Analysis (EDA)</li>
-    <li>Data Cleaning and Preprocessing</li>
-    <li>Statistical and Predictive Modeling</li>
-    <li>Machine Learning Model Development</li>
-    <li>Data Visualization and Communication</li>
-  </ul>
-</section>
+    showSection("home");
 
-<!-- CONTACT -->
-<section class="section" id="contact" style="display:none;">
-  <h2>Contact Me</h2>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
 
-  <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <label for="name">Your name</label><br>
-    <input type="text" id="name" name="name" required placeholder="Your name"><br><br>
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    <label for="email">Your email</label><br>
-    <input type="email" id="email" name="email" required placeholder="Your email"><br><br>
+      status.textContent = "Sending message...";
+      status.className = "";
 
-    <label for="message">Your message</label><br>
-    <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea><br><br>
+      const formData = new FormData(form);
 
-    <button type="submit">Send</button>
-    <p id="form-status" style="margin-top:12px;"></p>
-  </form>
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            "Accept": "application/json"
+          }
+        });
 
-  <p>Email: <a href="mailto:lacelehagenimana@gmail.com">lacelehagenimana@gmail.com</a></p>
-
-  <p>
-    <a href="https://github.com/celestinhagenimana2009" target="_blank" rel="noopener noreferrer">GitHub</a> |
-    <a href="https://www.linkedin.com/in/celestin-hagenimana-a69232375/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-    <a href="https://wa.me/250787091656" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-  </p>
-</section>
-
-<!-- SCRIPT -->
-<script>
-function showSection(sectionId) {
-  document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-
-  const btn = document.querySelector(`.nav-btn[onclick="showSection('${sectionId}')"]`);
-  if (btn) btn.classList.add('active');
-
-  if (sectionId !== 'home') {
-    document.getElementById(sectionId).style.display = 'block';
-  }
-}
-</script>
+        if (response.ok) {
+          status.textContent = "Your message has been sent successfully.";
+          status.className = "success";
+          form.reset();
+        } else {
+          status.textContent = "Message not sent. Please check your Formspree form ID and try again.";
+          status.className = "error";
+        }
+      } catch (error) {
+        status.textContent = "A network error occurred. Please try again.";
+        status.className = "error";
+      }
+    });
+  </script>
 
 </body>
 </html>
