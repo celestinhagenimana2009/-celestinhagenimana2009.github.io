@@ -14,22 +14,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(45,212,191,0.18), transparent 45%),
-    radial-gradient(circle at bottom right, rgba(99,102,241,0.20), transparent 48%),
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.18), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.20), transparent 48%),
     linear-gradient(135deg, #0b1220, #0f172a);
   color: #e5e7eb;
   line-height: 1.6;
 }
 
 /* =========================
-   FORCE ALL LINKS GREEN
+   LINKS
 ========================= */
-a, a:visited {
+a,
+a:visited {
   color: #2dd4bf;
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #2dd4bf;
   text-decoration: underline;
 }
@@ -66,7 +68,7 @@ a:hover, a:focus {
   padding: 8px 18px;
   font-size: 0.9em;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   transition: all 0.25s ease;
 }
 
@@ -85,7 +87,7 @@ a:hover, a:focus {
    HOME / HERO
 ========================= */
 .hero {
-  min-height: 60vh;
+  min-height: 100vh;
   padding-top: 90px;
   position: relative;
 }
@@ -106,8 +108,8 @@ a:hover, a:focus {
   margin-bottom: 18px;
   border-radius: 50%;
   padding: 6px;
-  background: rgba(255,255,255,0.05);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.5);
 }
 
 .hero-circle img {
@@ -160,13 +162,14 @@ a:hover, a:focus {
    CONTENT SECTIONS
 ========================= */
 .section {
+  display: none;
   padding: 60px 40px;
   max-width: 1000px;
-  margin: 40px auto 70px;
+  margin: 110px auto 70px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
 .section h2 {
@@ -174,7 +177,7 @@ a:hover, a:focus {
   line-height: 1.2;
   color: #ffffff;
   font-size: 1.9rem;
-  border-bottom: 1px solid rgba(45,212,191,0.6);
+  border-bottom: 1px solid rgba(45, 212, 191, 0.6);
   padding-bottom: 8px;
 }
 
@@ -280,9 +283,9 @@ a:hover, a:focus {
   margin-bottom: 38px;
   padding: 24px 24px 18px 24px;
   border-radius: 16px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
 }
 
 .project-item:last-child {
@@ -314,6 +317,16 @@ a:hover, a:focus {
 /* =========================
    FORM STYLING
 ========================= */
+#contact-form {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
 input,
 textarea,
 button {
@@ -325,11 +338,17 @@ input,
 textarea {
   width: 100%;
   padding: 12px 14px;
+  margin-bottom: 18px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
   color: #e5e7eb;
   outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
 }
 
 input::placeholder,
@@ -340,7 +359,7 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
   border-color: #2dd4bf;
-  box-shadow: 0 0 0 2px rgba(45,212,191,0.18);
+  box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.18);
 }
 
 button {
@@ -358,10 +377,28 @@ button:hover {
   color: #0b1220;
 }
 
+#form-status {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  min-height: 24px;
+}
+
+#form-status.success {
+  color: #2dd4bf;
+}
+
+#form-status.error {
+  color: #f87171;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
+  .top-header {
+    padding: 18px 20px;
+  }
+
   .hero-overlay {
     left: 20px;
     top: 95px;
@@ -375,7 +412,7 @@ button:hover {
 
   .section {
     padding: 40px 18px;
-    margin: 22px auto 40px;
+    margin: 95px 12px 40px;
   }
 
   .project-item {
